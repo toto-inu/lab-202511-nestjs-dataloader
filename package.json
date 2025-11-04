@@ -10,7 +10,8 @@
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:seed": "bun run prisma/seed.ts",
-    "db:setup": "docker-compose up -d && sleep 3 && bun run prisma:migrate && bun run prisma:seed"
+    "db:setup": "docker-compose up -d && sleep 3 && bun run prisma:migrate && bun run prisma:seed",
+    "test:comparison": "bun run scripts/test-comparison.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
