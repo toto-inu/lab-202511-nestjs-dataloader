@@ -6,7 +6,11 @@
   "scripts": {
     "start": "bun run src/main.ts",
     "start:dev": "bun --watch src/main.ts",
-    "build": "bun build src/main.ts --outdir dist --target node"
+    "build": "bun build src/main.ts --outdir dist --target node",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:seed": "bun run prisma/seed.ts",
+    "db:setup": "docker-compose up -d && sleep 3 && bun run prisma:migrate && bun run prisma:seed"
   },
   "devDependencies": {
     "@types/bun": "latest",
