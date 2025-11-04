@@ -1,0 +1,32 @@
+{
+  "name": "lab-202511-nestjs-dataloader",
+  "version": "1.0.0",
+  "description": "NestJS GraphQL DataLoader verification lab",
+  "private": true,
+  "scripts": {
+    "start": "bun run src/main.ts",
+    "start:dev": "bun --watch src/main.ts",
+    "build": "bun build src/main.ts --outdir dist --target node"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node": "^24.10.0",
+    "prisma": "^6.3.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@apollo/server": "^5.1.0",
+    "@nestjs/apollo": "^13.2.1",
+    "@nestjs/common": "^11.1.8",
+    "@nestjs/core": "^11.1.8",
+    "@nestjs/graphql": "^13.2.0",
+    "@nestjs/platform-express": "^11.1.8",
+    "@prisma/client": "^6.3.0",
+    "dataloader": "^2.2.3",
+    "graphql": "^16.12.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2"
+  }
+}
