@@ -88,7 +88,7 @@ async function main() {
     if (!healthCheck.ok) {
       throw new Error('Server is not responding');
     }
-  } catch (error) {
+  } catch (_error) {
     console.error('❌ Error: GraphQL server is not running!');
     console.error('   Please start the server first:');
     console.error('   1. bun run db:setup');
@@ -121,7 +121,7 @@ async function main() {
   // Simple test to verify server is responding
   console.log('\n✅ Verification Test (current setting):');
   try {
-    const result = await runTest(process.env.USE_DATALOADER === 'true');
+    await runTest(process.env.USE_DATALOADER === 'true');
     console.log('\n✅ Test completed successfully!');
   } catch (error) {
     console.error('\n❌ Test failed:', error);

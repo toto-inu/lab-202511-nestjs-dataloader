@@ -1,0 +1,24 @@
+type Inus {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreateInusInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateInusInput {
+  id: Int!
+}
+
+type Query {
+  inus: [Inus]!
+  inus(id: Int!): Inus
+}
+
+type Mutation {
+  createInus(createInusInput: CreateInusInput!): Inus!
+  updateInus(updateInusInput: UpdateInusInput!): Inus!
+  removeInus(id: Int!): Inus
+}
